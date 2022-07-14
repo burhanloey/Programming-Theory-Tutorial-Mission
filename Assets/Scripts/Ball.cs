@@ -6,6 +6,11 @@ public class Ball : InteractableItem
 {
     private float _launchSpeed = 50f;
 
+    protected override bool ResetBeforeInteract()
+    {
+        return false;
+    }
+
     public override void DoInteraction()
     {
         Rigidbody rb = GetComponent<Rigidbody>();

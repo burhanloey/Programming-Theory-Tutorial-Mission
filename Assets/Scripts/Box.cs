@@ -26,6 +26,15 @@ public class Box : InteractableItem
         rb.MovePosition(_initialPosition);
         rb.MoveRotation(_initialRotation);
         rb.AddForce(_launchSpeed * Vector3.up, ForceMode.Impulse);
-        rb.AddTorque(_torque * (Vector3.up + Vector3.forward), ForceMode.Impulse);
+        rb.AddTorque(_torque * GenerateRandomDirection(), ForceMode.Impulse);
+    }
+
+    private Vector3 GenerateRandomDirection()
+    {
+        float x = Random.Range(0f, 1f);
+        float y = Random.Range(0f, 1f);
+        float z = Random.Range(0f, 1f);
+
+        return new Vector3(x, y, z);
     }
 }

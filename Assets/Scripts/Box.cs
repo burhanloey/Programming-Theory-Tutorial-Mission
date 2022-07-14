@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cube : MonoBehaviour
+public class Box : MonoBehaviour
 {
     private float _launchSpeed = 50f;
     private float _torque = 10000f;

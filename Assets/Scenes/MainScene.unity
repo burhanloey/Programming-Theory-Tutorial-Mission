@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 1093606144}
   - component: {fileID: 1093606146}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -351,8 +351,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79c7a198fb2789544870404baf55a4f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinForce: 10000
-  maxSpinSpeed: 100
 --- !u!64 &1093606146
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -507,10 +505,10 @@ GameObject:
   - component: {fileID: 1861298236}
   - component: {fileID: 1861298235}
   - component: {fileID: 1861298234}
-  - component: {fileID: 1861298238}
   - component: {fileID: 1861298239}
+  - component: {fileID: 1861298240}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -594,19 +592,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1861298238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1861298233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 330c1a5d717eecf409e2193693d579f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  launchForce: 50
 --- !u!54 &1861298239
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -623,6 +608,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1861298240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861298233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5960b24c9f804eb4d935229678555965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1986144154
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,7 +729,7 @@ GameObject:
   - component: {fileID: 2044257126}
   - component: {fileID: 2044257125}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -750,8 +747,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685f64d3107bbde4d96db64ee9dd05f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchSpeed: 50
-  spinSpeed: 10000
 --- !u!54 &2044257126
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -11,23 +11,28 @@ public class InputManager : MonoBehaviour
         hitInfo = new RaycastHit();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))  // Left mouse click
         {
             bool isHit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
 
-            if (isHit)
+            if (!isHit)
             {
-                Debug.Log("hit " + hitInfo.transform.gameObject.name);
+                return;
             }
+
+            Debug.Log("hit " + hitInfo.transform.gameObject.name);
+
+            InteractableItem item = hitInfo.transform.gameObject.GetComponent<InteractableItem>();
+
+            if (item == null)
+            {
+                return;
+            }
+
+            item.Interact();
         }
     }
 }

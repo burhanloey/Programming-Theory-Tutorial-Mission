@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Box : InteractableItem
 {
-    private float _launchSpeed = 50f;
+    private float _launchSpeed = 20f;
     private float _torque = 10000f;
     private float _maxSpinSpeed = 50f;
 

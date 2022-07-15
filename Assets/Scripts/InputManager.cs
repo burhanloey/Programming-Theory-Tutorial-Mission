@@ -23,8 +23,6 @@ public class InputManager : MonoBehaviour
                 return;
             }
 
-            Debug.Log("hit " + hitInfo.transform.gameObject.name);
-
             InteractableItem item = hitInfo.transform.gameObject.GetComponent<InteractableItem>();
 
             if (item == null)

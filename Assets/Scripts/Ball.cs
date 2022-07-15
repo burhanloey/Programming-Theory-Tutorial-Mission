@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ball : InteractableItem
 {
-    private float _launchSpeed = 50f;
+    private float _launchSpeed = 25f;
 
     protected override bool ResetBeforeInteract()
     {

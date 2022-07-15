@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Box : InteractableItem
 {
+    // ENCAPSULATION
     private float _launchSpeed = 20f;
     private float _torque = 10000f;
     private float _maxSpinSpeed = 50f;
@@ -14,6 +16,7 @@ public class Box : InteractableItem
         rb.maxAngularVelocity = _maxSpinSpeed;
     }
 
+    // POLYMORPHISM
     public override void DoInteraction()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
